@@ -1,5 +1,16 @@
 const READLINE = require("readline-sync");
 
+let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N");
+if(wantsToDrink == 'Y') {
+	let age = READLINE.question("Please enter your age: ");
+	if(age >= 21) {
+		console.log("You can have some. Here.");
+	}
+	else {
+		console.log("I'm sorry. It's illegal to drink alcohol if your under 21.");	
+	}
+}
+
 // **** Problem 1: R-rated ****
 // You cannot see an R-rated movie unless you are at least 18, or you are with
 // an adult. Write code that prints whether or not someone can see an
@@ -7,6 +18,16 @@ const READLINE = require("readline-sync");
 console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
+if(age >= 18 || withAdult == 'yes') {
+	console.log("Ok you can head in theater 3.");
+}
+else {
+	console.log("Sorry, you cant see that movie.");
+}
+
+if(age < 18 && withAdult == 'yes') {
+	console.log("Sorry, you cant see that movie.");
+}
 
 
 // **** Problem 2: Umbrella ****
@@ -17,6 +38,24 @@ let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
 console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
+if(raining == 'yes') {
+	console.log("You should bring an umbrella.");
+}
+if (raining == 'no') {
+	console.log("No need for an umbrella today");
+}
+
+if (thunderstorming == 'no') {
+	console.log("If its raining, bring an umbrella.")
+}
+
+if(thunderstorming == 'yes') {
+	console.log("Dont bring an umbrella, you could get electrified.");
+}
+
+if (raining == 'no' && thunderstorming == 'no') {
+	console.log("Clear skies today, no need for an umbrella.")
+}
 
 
 // **** Problem 3: Monkey Trouble ****
@@ -26,6 +65,8 @@ let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
+
+if(bubbles == 'yes')
 
 
 // **** Problem 4: First Place ****
