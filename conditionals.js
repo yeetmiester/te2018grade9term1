@@ -1,6 +1,6 @@
 const READLINE = require("readline-sync");
 
-let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N");
+let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N: ");
 if(wantsToDrink == 'Y') {
 	let age = READLINE.question("Please enter your age: ");
 	if(age >= 21) {
@@ -46,7 +46,7 @@ if (raining == 'no') {
 }
 
 if (thunderstorming == 'no') {
-	console.log("If its raining, bring an umbrella.")
+	console.log("If its raining, bring an umbrella.")""
 }
 
 if(thunderstorming == 'yes') {
@@ -66,7 +66,31 @@ console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
 
-if(bubbles == 'yes')
+if(bubbles == 'yes') {
+	console.log("It's happy for now");
+}
+
+if(bubbles == 'no') {
+	console.log("Back off guy!");
+}
+
+if(spankey == 'yes') {
+	console.log("Ha yeet!");
+}
+
+if(spankey == 'no') {
+	console.log("Dat boi is hella mad fam");
+}
+
+if(spankey == 'yes' && bubbles == 'yes') {
+	console.log("They seem calm");
+}
+
+if(spankey == 'no' && bubbles == 'no') {
+	console.log("They will rip out your intestines and feed them to you, back away slowly.");
+}
+
+
 
 
 // **** Problem 4: First Place ****
@@ -76,6 +100,18 @@ console.log("*** Problem 4: First Place ***");
 let score1 = READLINE.question("Enter the first score: ");
 let score2 = READLINE.question("Enter the second score: ");
 let score3 = READLINE.question("Enter the third score: ");
+
+if(score1 >= score2 && score3) {
+	console.log("Player 1 Wins");
+}
+
+if(score2 > score1 && score3) {
+	console.log("Player 2 Wins");
+}
+
+if(score3 > score1 && score2) {
+	console.log("Player 3 Wins");
+}
 
 
 // **** Problem 5: Phone Shopping ****
@@ -89,6 +125,20 @@ let score3 = READLINE.question("Enter the third score: ");
 // money they have.
 console.log("*** Problem 5: Phone Shopping ***");
 let money = READLINE.question("How much money do you have?: ");
+
+if(money >= 30 && money <= 100) {
+	console.log("You can buy a prepaid phone")
+}
+
+if(money >= 100 && money <= 130) {
+	console.log("You can buy a prepaid phone or a bottom-tier phone")
+}
+
+if(money >= 130 money <= 300) {
+	console.log("You can buy a prepaid phone and a bottom-tier phone")
+}
+
+if(money >= 300 <= 430) 
 
 
 // **** Problem 6: Guess My Number ****
