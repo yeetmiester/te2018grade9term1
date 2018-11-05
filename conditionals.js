@@ -138,7 +138,9 @@ if(money >= 130 money <= 300) {
 	console.log("You can buy a prepaid phone and a bottom-tier phone")
 }
 
-if(money >= 300 <= 430) 
+if(money >= 300 && <= 430) {
+	console.log()
+}
 
 
 // **** Problem 6: Guess My Number ****
