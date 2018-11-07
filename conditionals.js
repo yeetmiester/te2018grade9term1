@@ -1,6 +1,10 @@
 const READLINE = require("readline-sync");
 
 let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N: ");
+
+if(wantsToDrink == 'N') {
+	console.log("Ok, see you around");
+}
 if(wantsToDrink == 'Y') {
 	let age = READLINE.question("Please enter your age: ");
 	if(age >= 21) {
@@ -46,7 +50,7 @@ if (raining == 'no') {
 }
 
 if (thunderstorming == 'no') {
-	console.log("If its raining, bring an umbrella.")""
+	console.log("If its raining, bring an umbrella.")
 }
 
 if(thunderstorming == 'yes') {
@@ -54,7 +58,6 @@ if(thunderstorming == 'yes') {
 }
 
 if (raining == 'no' && thunderstorming == 'no') {
-	console.log("Clear skies today, no need for an umbrella.")
 }
 
 
@@ -101,15 +104,15 @@ let score1 = READLINE.question("Enter the first score: ");
 let score2 = READLINE.question("Enter the second score: ");
 let score3 = READLINE.question("Enter the third score: ");
 
-if(score1 >= score2 && score3) {
+if(score1 > score2 || score3) {
 	console.log("Player 1 Wins");
 }
 
-if(score2 > score1 && score3) {
+if(score2 > score1 || score3) {
 	console.log("Player 2 Wins");
 }
 
-if(score3 > score1 && score2) {
+if(score3 > score1 || score2) {
 	console.log("Player 3 Wins");
 }
 
@@ -126,20 +129,28 @@ if(score3 > score1 && score2) {
 console.log("*** Problem 5: Phone Shopping ***");
 let money = READLINE.question("How much money do you have?: ");
 
-if(money >= 30 && money <= 100) {
-	console.log("You can buy a prepaid phone")
+if(money < 30) {
+	console.log("Sorry you cant buy anything because your poor lol noob")
 }
 
-if(money >= 100 && money <= 130) {
-	console.log("You can buy a prepaid phone or a bottom-tier phone")
+if(money >= 30) {
+	console.log("You can buy a prepaid phone");
 }
 
-if(money >= 130 money <= 300) {
-	console.log("You can buy a prepaid phone and a bottom-tier phone")
+if(money >= 100) {
+	console.log("You can buy a prepaid phone or a bottom-tier phone");
 }
 
-if(money >= 300 && <= 430) {
-	console.log()
+if(money >= 300 ) {
+	console.log("You can buy 10 prepaid phones, 3 bottom-tier phone or a middle-tier phone");
+}
+
+if(money >= 600) {
+	console.log("You can buy 20 prepaid phones, 6 bottom-tier phones, 2 middle-tier phones or a top tier phone");
+}
+
+if(money >= 1030) {
+	console.log("You can buy one of every phone");
 }
 
 
@@ -151,4 +162,16 @@ if(money >= 300 && <= 430) {
 // them they are cold.
 console.log("*** Problem 6: Guess My Number ***");
 let myNum = 5;
-let guess = READLINE.question("I'm thinking of a number. Guess it: ");
+let guess = READLINE.question("I'm thinking of a number between 1 and 10. Guess it: ");
+
+if(guess == myNum) {
+	console.log("You guessed the right number, goodjob.");
+}
+
+if(guess > myNum) {
+	console.log("You guessed wrong, looser");
+}
+
+if(guess < myNum) {
+	console.log("You guessed wrong, looser");
+}
