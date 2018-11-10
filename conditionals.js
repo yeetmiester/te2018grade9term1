@@ -104,15 +104,15 @@ let score1 = READLINE.question("Enter the first score: ");
 let score2 = READLINE.question("Enter the second score: ");
 let score3 = READLINE.question("Enter the third score: ");
 
-if(score1 > score2 || score3) {
+if(score1 > score2 && score3) {
 	console.log("Player 1 Wins");
 }
 
-if(score2 > score1 || score3) {
+if(score2 > score1 && score3) {
 	console.log("Player 2 Wins");
 }
 
-if(score3 > score1 || score2) {
+if(score3 > score1 && score2) {
 	console.log("Player 3 Wins");
 }
 
