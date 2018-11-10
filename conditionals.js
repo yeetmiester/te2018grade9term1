@@ -1,5 +1,80 @@
 const READLINE = require("readline-sync");
 
+let howWasYourDay = READLINE.question("How was your day? (Answer Good or Bad) "); 
+if(howWasYourDay = 'Good') {
+	console.log("Thats good.");
+}
+
+else {
+	console.log("Oh I'm sorry.");
+}
+
+let didYouLearnAnythingNwToday = READLINE.question("Did you learn anything new today? (Answer Yes or No) ");
+if(didYouLearnAnythingNwToday = 'Yes') {
+	console.log("Ok great!");
+}
+if(didYouLearnAnythingNwToday = 'No') {
+	console.log("Oh, ok.");
+}
+
+let didYouGetAnyHomework = READLINE.question("Did you get any homework? (Answer Yes or No)  ");
+if(didYouGetAnyHomework = 'Yes') {
+	console.log("Ok.");
+}
+if(didYouGetAnyHomework =  'No') {
+console.log("Yeah you do, your teacher emailed me.");
+
+} 
+
+let didYouDit = READLINE.question("Did you do it? (Answer Yes or No)  ");
+if(didYouDit = 'Yes') {
+	console.log("Ok good job");
+}
+if(didYouDit = 'No') {
+	console.log("Get on that. (You do all of your homework)");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N: ");
 
 if(wantsToDrink == 'N') {
@@ -175,3 +250,39 @@ if(guess > myNum) {
 if(guess < myNum) {
 	console.log("You guessed wrong, looser");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
