@@ -1,5 +1,5 @@
 const READLINE = require("readline-sync");
-
+//parent
 let howWasYourDay = READLINE.question("How was your day? (Answer Good or Bad) "); 
 if(howWasYourDay = 'Good') {
 	console.log("Thats good.");
@@ -33,48 +33,7 @@ if(didYouDit = 'Yes') {
 if(didYouDit = 'No') {
 	console.log("Get on that. (You do all of your homework)");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Drunking
 let wantsToDrink = READLINE.question("You're at a party and somone offers you a beer. Do you want it? Type Y/N: ");
 
 if(wantsToDrink == 'N') {
@@ -236,7 +195,7 @@ if(money >= 1030) {
 // If their guess is myNum +/- 3, tell them they are "warm"; otherwise tell
 // them they are cold.
 console.log("*** Problem 6: Guess My Number ***");
-let myNum = 5;
+let myNum = 7
 let guess = READLINE.question("I'm thinking of a number between 1 and 10. Guess it: ");
 
 if(guess == myNum) {
@@ -244,11 +203,25 @@ if(guess == myNum) {
 }
 
 if(guess > myNum) {
-	console.log("You guessed wrong, looser");
+	console.log("Your too high");
 }
 
 if(guess < myNum) {
-	console.log("You guessed wrong, looser");
+	console.log("You too low");
+}
+
+let guess2 = READLINE.question("Try Again: ");
+
+if(guess2 == myNum) {
+	console.log("You guessed the right number, goodjob.");
+}
+
+if(guess2 > myNum) {
+	console.log("Your too high");
+}
+
+if(guess2 < myNum) {
+	console.log("Your too low");
 }
 
 
